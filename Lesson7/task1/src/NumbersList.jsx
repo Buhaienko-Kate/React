@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NumberList = ({ numbers }) => {
+const NumbersList = ({ numbers }) => {
   //   const numberElements = numbers.map(num => <li>{num}</li>);
 
   //     return <ul>{numberElements}</ul>;
@@ -14,4 +14,4 @@ const NumberList = ({ numbers }) => {
   );
 };
 
-export default NumberList;
+export default NumbersList;
