@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Dimension extends React.Component {
+class Dimensions extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,7 +12,7 @@ class Dimension extends React.Component {
   componentDidMount() {
     window.addEventListener('resize', this.onResize);
     const { innerWidth, innerHeight } = window;
-    this.setDimensions(innerWidth, innerHeight);
+    this.setDimensions({ width: innerWidth, height: innerHeight });
   }
 
   componentWillUnmount() {
@@ -21,13 +21,13 @@ class Dimension extends React.Component {
 
   onResize = e => {
     const { innerWidth, innerHeight } = e.target;
-    this.setDimensions(innerWidth, innerHeight);
+    this.setDimensions({ width: innerWidth, height: innerHeight });
   };
 
   setDimensions = (width, height) => {
     this.setState({
-      width,
-      height,
+      width: innerWidth,
+      height: innerHeight,
     });
     document.title = `${width} x ${height}`;
   };
@@ -37,4 +37,4 @@ class Dimension extends React.Component {
   }
 }
 
-export default Dimension;
+export default Dimensions;
