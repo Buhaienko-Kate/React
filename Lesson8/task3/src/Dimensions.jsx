@@ -22,13 +22,13 @@ class Dimensions extends React.Component {
     this.setDimensions(innerWidth, innerHeight);
   };
 
-  setDimensions(width, height) {
+  setDimensions = (width, height) => {
     this.setState({
       width,
       height,
     });
     document.title = `${width} x ${height}`;
-  }
+  };
 
   render() {
     return <div className="dimensions">{`${this.state.width}px - ${this.state.height}px`}</div>;
