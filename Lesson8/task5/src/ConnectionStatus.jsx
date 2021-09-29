@@ -23,7 +23,7 @@ class ConnectionStatus extends React.Component {
     console.log(this.props.children);
     const changeStatus = this.state.status === 'offline' ? 'status_offline' : '';
 
-    return <div className={`status ${changeStatus}`}>Offline</div>;
+    return <div className={`status ${changeStatus}`}>{this.state.status}</div>;
   }
 }
 
