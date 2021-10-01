@@ -21,7 +21,7 @@ class UserForm extends React.Component {
         ref={this.setRef}
         className="login-form"
         onSubmit={() => {
-          event.preventDefault();
+          // event.preventDefault();
           const formData = [...new FormData(this.formRef)].reduce(
             (acc, [name, value]) => ({ ...acc, [name]: value }),
             {},
