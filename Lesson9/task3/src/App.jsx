@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import UserForm from './UserForm.jsx';
 
 class App extends Component {
-  createUser = userData => {
+  createUser = formData => {
     event.preventDefault();
-    console.log(userData);
+    console.log(formData);
   };
   render() {
     return <UserForm onSubmit={this.createUser} />;
