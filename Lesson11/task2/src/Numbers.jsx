@@ -1,0 +1,42 @@
+// import React from 'react';
+
+// class Numbers extends React.Component {
+//   shouldComponentUpdate(nextProps) {
+//     if (this.props.number === nextProps.number && this.props.title === nextProps.title) {
+//       return false;
+//     }
+//     return true;
+//   }
+//   render() {
+//     return (
+//       <div className="number">
+//         <span className="number__title">{this.props.title}</span>
+//         <span className="number__value">{this.props.number}</span>
+//       </div>
+//     );
+//   }
+// }
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+class Numbers extends React.PureComponent {
+  render() {
+    return (
+      <div className="number">
+        <span className="number__title">{this.props.title}</span>
+        <span className="number__value">{this.props.number}</span>
+      </div>
+    );
+  }
+}
+Numbers.propTypes = {
+  title: PropTypes.string,
+  number: PropTypes.number.isRequired,
+};
+Numbers.defaultProps = {
+  title: 'Some number',
+};
+// userData = {name: 'Tom, age: 18} PureComponent не отловит
+// изменение внутри userData(PureComponent проверяет только на верхнем уровне)
+export default Numbers;
