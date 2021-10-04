@@ -10,14 +10,8 @@ class App extends React.Component {
     },
   };
 
-  handleChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      userData: {
-        ...this.state.userData,
-        [name]: value,
-      },
-    });
+  handleChange = userData => {
+    this.setState(userData);
   };
 
   render() {
