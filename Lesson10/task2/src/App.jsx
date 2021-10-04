@@ -19,7 +19,9 @@ class App extends React.Component {
       },
     });
   };
-
+  // handleChange = userData => {
+  //   this.setState(userData);
+  // };
   render() {
     const { userData } = this.state;
     return (

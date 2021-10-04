@@ -29,6 +29,13 @@ import React from 'react';
 // export default UserForm;
 
 const UserForm = ({ userData, handleChange }) => {
+  // const handleOnChange = event => {
+  //   const { name, value } = event.target;
+  //   handleChange({
+  //     ...userData,
+  //     [name]: value,
+  //   });
+  // };
   return (
     <form className="user-form">
       <input
