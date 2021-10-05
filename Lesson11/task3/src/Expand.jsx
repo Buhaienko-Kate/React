@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 const Expand = ({ title, children, onClose, isOpen }) => {
-  let content = isOpen ? <div className="expand__content">{children}</div> : null;
   // console.log(isOpen);
   return (
     <div className="expand border">
@@ -14,9 +15,14 @@ const Expand = ({ title, children, onClose, isOpen }) => {
           ) : (
             <i className="fas fa-chevron-down">∨</i>
           )}
+          {/* {isOpen ? (
+            <FontAwesomeIcon icon={faChevronUp} />
+          ) : (
+            <FontAwesomeIcon icon={faChevronDown} />
+          )} */}
         </button>
       </div>
-      <div className="expand__content">{content}</div>
+      {isOpen && <div className="expand__content">{children}</div>}
     </div>
   );
 };
