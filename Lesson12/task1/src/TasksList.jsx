@@ -30,7 +30,7 @@ class TasksList extends React.Component {
       done: false,
     };
 
-    createTask(newTask).then(() => this.fetchTasks());
+    return createTask(newTask).then(() => this.fetchTasks());
   };
 
   handleTaskStatusChange = id => {
