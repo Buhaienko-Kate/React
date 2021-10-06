@@ -73,7 +73,7 @@ class TasksList extends React.Component {
   render() {
     const sortedList = this.state.tasks.slice().sort((a, b) => a.done - b.done);
     return (
-      <div className="todo-list">
+      <main className="todo-list">
         <CreateTaskInput onCreate={this.onCreate} />
         <ul className="list">
           {sortedList.map(task => (
@@ -87,7 +87,7 @@ class TasksList extends React.Component {
             // <Task id={task.id} text={task.text} done={task.done} />
           ))}
         </ul>
-      </div>
+      </main>
     );
   }
 }
